@@ -167,8 +167,8 @@ function sendEMail(text, to, subject) {
     });
 }
 function sendAlexa(text, lautstaerke) {
-    setState('alexa2.0.Echo-Devices.G2A0XL07022603EU.Commands.speak-volume', lautstaerke);
-    setState('alexa2.0.Echo-Devices.G2A0XL07022603EU.Commands.speak', text,);
+    setState('alexa2.0.Echo-Devices.xxxxxxxxxx.Commands.speak-volume', lautstaerke);
+    setState('alexa2.0.Echo-Devices.xxxxxxxxxx.Commands.speak', text,);
 }
 
  
@@ -176,8 +176,8 @@ async function main() {
     let xml = await getData()
     let json = await xml2json(xml);
     let einsaetze = normalizeData(json.webext2.einsaetze.einsatz);
-    let einsaetze_einheiten = filterEinheiten(einsaetze, [410321, 410327]);
-    let einsaetze_bezirk = filterBezirk(einsaetze,10);
+    let einsaetze_einheiten = filterEinheiten(einsaetze, [410221, 410227]); //hier FF-Einheit ID eingeben; mehrere durch , getrennt
+    let einsaetze_bezirk = filterBezirk(einsaetze,09); //hier Bezirks-ID eintragen
     let html1 = toHtml(einsaetze_einheiten);
     let html2 = toHtml(einsaetze_bezirk);
     let html3 = toHtml(einsaetze);
@@ -186,7 +186,7 @@ async function main() {
     let nachtruhe=compareTime("01:00", "06:00","between");
     if (!nachtruhe || messages) sendAlexa(messages, 60);
     if (messages) sendTelegram(messages, "");
-    if (messages) sendEMail(messages, "christian@nega.at", "Neuer Feuerwehreinsatz");
+    if (messages) sendEMail(messages, "sepp@hias.at", "Neuer Feuerwehreinsatz");
     //console.log(html1);
     //console.log(html2);
     //console.log(html3);
