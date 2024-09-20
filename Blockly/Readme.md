@@ -5,3 +5,5 @@ Images/Akkualarm_HmIP.jpg
 ![Images/Akkualarm_HmIP.jpg){:height="36px" width="36px"}.
 
 ![drawing](Script_Library/blob/main/Images/Akkualarm_HmIP.jpg)
+
+<img src="[pfad/zum/bild.jpg](https://github.com/Negalein/Script_Library/blob/main/Images/Akkualarm_HmIP.jpg)" alt="Beschreibung" width="50%">
