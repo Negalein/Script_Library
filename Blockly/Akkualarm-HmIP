@@ -1,0 +1,99 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="schedule" id="HI3wIFWIX/?kYOT=QQ3T" x="113" y="37">
+    <field name="SCHEDULE">0 15 * * *</field>
+    <statement name="STATEMENT">
+      <block type="on_ext" id="OrQq`kQN)^T;:dHCnB5f">
+        <mutation xmlns="http://www.w3.org/1999/xhtml" items="1"></mutation>
+        <field name="CONDITION">ne</field>
+        <field name="ACK_CONDITION"></field>
+        <value name="OID0">
+          <shadow type="field_oid" id="v%,8[.QxBhu-?L%yqso_">
+            <field name="oid">default</field>
+          </shadow>
+          <block type="selector" id=";+vF_Bf(/`l,0ek`VhaY">
+            <field name="TEXT">state[id=*](funktions=Akku_HmIP)</field>
+          </block>
+        </value>
+        <statement name="STATEMENT">
+          <block type="controls_if" id="bVj1#P,#)VDd|poE8CG|">
+            <value name="IF0">
+              <block type="logic_compare" id="^W@7z:5o~sXPn(Eo2erj">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="on_source" id="CnYs*r%u/!U7km)vu%P/">
+                    <field name="ATTR">state.val</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_boolean" id="K^VK_?$W_3Uf23q@Xmh`">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="telegram" id=".].XdRXFo76Whf*Hlp_0">
+                <field name="INSTANCE"></field>
+                <field name="LOG"></field>
+                <field name="SILENT">FALSE</field>
+                <field name="PARSEMODE">default</field>
+                <field name="ESCAPING">FALSE</field>
+                <field name="DISABLE_WEB_PAGE_PREVIEW">FALSE</field>
+                <value name="MESSAGE">
+                  <shadow type="text" id=",MM1/TCqggxue)~roHp@">
+                    <field name="TEXT">text</field>
+                  </shadow>
+                  <block type="text_join" id="DrHziOD3G4Anw:iSy:qc">
+                    <mutation items="3"></mutation>
+                    <value name="ADD0">
+                      <block type="text" id="}K$fXaCmFQ?agiRwlf}|">
+                        <field name="TEXT">Batterie von </field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="on_source" id="uH)LC4+9:?MD-Kr{s1.k">
+                        <field name="ATTR">channelName</field>
+                      </block>
+                    </value>
+                    <value name="ADD2">
+                      <block type="text" id="-7+2R*=%WtU~A-#.p7+T">
+                        <field name="TEXT"> ist schwach!</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="control" id="T=~=8WW9#a(kA6L9hE1v">
+                    <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                    <field name="OID">alexa2.0.Echo-Devices.G2A0XL07022603EU.Commands.speak</field>
+                    <field name="WITH_DELAY">FALSE</field>
+                    <value name="VALUE">
+                      <block type="text_join" id="_%Ptla#-c:6Y5RoCdJvw">
+                        <mutation items="3"></mutation>
+                        <value name="ADD0">
+                          <block type="text" id="~EWiGkXnYG0,`,xBmg3i">
+                            <field name="TEXT">Batterie von </field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="on_source" id="zu]!k:UGFgf:fAskaO[$">
+                            <field name="ATTR">channelName</field>
+                          </block>
+                        </value>
+                        <value name="ADD2">
+                          <block type="text" id="3RU(W*FpjNI*Y]j5I!aV">
+                            <field name="TEXT"> ist schwach!</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>
