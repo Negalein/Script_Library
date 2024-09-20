@@ -4,4 +4,4 @@ Images/Akkualarm_HmIP.jpg
 
 ![Images/Akkualarm_HmIP.jpg){:height="36px" width="36px"}.
 
-![drawing](Images/Akkualarm_HmIP.jpg)
+![drawing](Script_Library/blob/main/Images/Akkualarm_HmIP.jpg)
