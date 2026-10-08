@@ -1,6 +1,6 @@
 MIT-Lizenz
 
-Copyright (c) 2024 Negalein
+Copyright (c) 2024 - .... Negalein
 
 Hiermit wird jeder Person, die eine Kopie
 dieser Software und der zugehörigen Dokumentationsdateien (die „Software“) erhält, die unentgeltliche Genehmigung erteilt, mit der Software uneingeschränkt zu verfahren, einschließlich, aber nicht beschränkt auf die Rechte,
